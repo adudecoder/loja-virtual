@@ -2,6 +2,15 @@
 
 namespace App\Controllers\Site;
 
-class ProdutoController {
-    
+class ProdutoController
+{
+
+    public function index()
+    {
+        
+    }
+
+    public function calca()
+    {
+    }
 }
