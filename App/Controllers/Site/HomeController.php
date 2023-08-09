@@ -8,6 +8,12 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        $this->twig;
+
+        $dados = [
+            'titulo' => 'Loja Virtual'
+        ];
+
+        $template = $this->twig->load('home.html');
+        $template->display($dados);
     }
 }
