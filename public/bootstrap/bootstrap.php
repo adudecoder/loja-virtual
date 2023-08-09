@@ -1,5 +1,10 @@
 <?php
 
+use App\Classes\Template;
+
+$template = new Template;
+$twig = $template->init();
+
 /**
  * Chamando o controller digitado na url
  * http://localhost:8888/controller
@@ -7,6 +12,7 @@
 $callController = new App\Controllers\Controller;
 $calledController = $callController->controller();
 $controller = new $calledController();
+$controller->setTwig($twig);
 
 
 /**
