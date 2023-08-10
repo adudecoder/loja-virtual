@@ -10,7 +10,8 @@ class HomeController extends BaseController
     {
 
         $dados = [
-            'titulo' => 'Loja Virtual'
+            'titulo' => 'Loja Virtual',
+            'nome' => 'Home'
         ];
 
         $template = $this->twig->load('home.html');
