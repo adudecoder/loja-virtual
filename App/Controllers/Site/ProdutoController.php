@@ -14,4 +14,9 @@ class ProdutoController
     {
         dump('calca');
     }
+
+    public function setTwig()
+    {
+        dump('SetTwig');
+    }
 }
