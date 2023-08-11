@@ -14,11 +14,10 @@ class Parameters
         $this->uri = $uri->getUri();
     }
 
-    public function explodeParameters()
+    private function explodeParameters()
     {
         $explodeUri = explode('/', $this->uri);
         $this->parameter = array_filter($explodeUri);
-        dump($this->parameter);
     }
 
     public function getParameterMethod($object, $method)

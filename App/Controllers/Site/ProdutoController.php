@@ -2,21 +2,18 @@
 
 namespace App\Controllers\Site;
 
-class ProdutoController
+use App\Controllers\BaseController;
+
+class ProdutoController extends BaseController
 {
 
-    public function index()
+    public function index($parameters)
     {
-        dump('index');
+        dump($parameters[2]);
     }
 
-    public function calca()
+    public function calca($parameters)
     {
-        dump('calca');
-    }
-
-    public function setTwig()
-    {
-        dump('SetTwig');
+        dump($parameters[2]);
     }
 }
