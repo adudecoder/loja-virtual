@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ titulo }}</title>
-</head>
-<body>
-    {% block site_content %}{% endblock %}
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/table.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/button.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/form.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ site_url() }}/assets/css/style.css"
+    />
+    <link />
+
+    <script
+      type="text/javascript"
+      src="{{ site_url() }}/assets/js/boxOver.js"
+    ></script>
+  </head>
+  <body>
+    <div id="main_container">
+      <div class="top_bar">
+        <!--Include do header-->
+        <div id="main_content">
+            <div id="menu_tab">
+                <!--Include do menu-->
+            </div>
+            <div class="crumb_navigation"><!--Breadcrumb--></div>
+            <div class="left_content">
+                <div class="title_box">Categorias</div>
+                <ul class="left_menu">
+                    <!--Include do left menu-->
+                </ul>
+                <div class="title_box">Promoção</div>
+                <div class="border_box">
+                    <div class="product_title"><!--Nome produto em promoção--></div>
+                    <div class="product_image"><!--Imagem do produto em promoção--></div>
+                    <div class="prod_price">
+                        <!--Preço do produto-->
+                    </div>
+                </div>
+                <div class="title_box">Newsletter</div>
+                <div class="border_box">
+                    <input type="text" name="newsletter" class="newsletter_input" value="Seu email">
+                    <a href="#" class="join">cadastrar email</a>
+                    <div class="banner_adds">
+                        <a href="#">
+                            <!--Banner de promoção, propaganda-->
+                            <img src="" alt="Banner">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="center_content">
+                    {% block content %}{% endblock %}
+                </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
